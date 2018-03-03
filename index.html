@@ -1,1 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<title>Burrito Masala</title>
+    
+    <link rel = "stylesheet" href = "css/reset.css" type="text/css">
+    <link rel = "stylesheet" href = "css/grid.css" type="text/css">
+    <link rel = "stylesheet" href = "css/generic.css" type="text/css">
+    <link rel = "stylesheet" href = "css/style.css" type="text/css">
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+ </head>
+
+    <body>
+        
+   <header>
+   
+<div id="sitelogo"></div>
+         <h1>Welcome to Burrito Masala</h1>
+  
+<!-- Slideshow container -->
+<div id="slideshow">
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+<div class="mySlides fade">
+<img src="images/tikka-masala.jpg" alt="chicken">
+    
+  </div>
+
+<div class="mySlides fade">
+<img src="images/lamb_curry.jpg" alt="lamb">
+   
+  </div>
+
+<div class="mySlides fade">
+<img src="images/burrito.jpg" alt="burrito" >
+   
+  </div>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+    </div>
+       </div>
+
+</header>
+
+   
+    <main>
+        <h2>Menu</h2>
+        
+        <p>We specialize in delicious southern Indian (Kerala) and Mexican foods… stuffed in a flour tortilla! 
+           Diners can also opt to go gluten free with our bowl options. </p>
+        
+        <h2>How it works</h2>
+            
+            <p>You pick 1 item, either a burrito or bowl.
+            Your choice of either 1 type of meat or 1 type of vegetable.<br>
+            See below for your meat, vegetable, rice and topping choices.<br></p>
+        
+        
+        <h3>Meats and Vegetables(Choose 1)</h3>
+        <ul>
+            <li>Chicken Tikka Masala</li>
+            <li>Lamb Curry</li>
+            <li>Pork in salsa verde</li>
+            <li>Sambar (lentil curry, vegan)</li>
+            <li>Aloo Gobi Masala (potato and cauliflower)</li>
+            <li>Chile Relleno (vegetarian, contains cheese)</li>
+        </ul>
+        
+        
+        <h3>Rice (vegan)(Choose 1)</h3>
+        <ul>
+            <li>Kerala Biryani</li>
+            <li>Spanish rice</li>
+            <li>White or brown rice (Khaima) </li>
+        </ul>
+        
+        
+        <h3>Toppings (Unlimited)</h3>
+        <ul>
+            <li>Mango Chutney</li>
+            <li>Tomatillo Salsa</li>
+            <li>Raita</li>
+            <li>Grandma Nena's Fiery Red Salsa</li>
+            <li>Cheese</li>
+            <li>Sour Cream</li>
+            <li>Onions</li>
+            <li>Tomatoes</li>
+            <li>Cucumbers</li>
+            <li>Cilantro</li>
+            <li>Guacamole ($.75 extra!)</li>
+        </ul>
+        <br>
+         <h3>Call or Text: 503-555-5555 to place your order now!</h3>
+        
+<div id="photos"> 
+<img src="images/owners.jpg" alt="picture" style="align-content: center"></div>
+        
+                    <h3>Meet The Owners</h3>
+ <p> James Beard award-winning chefs Prasad Varma and Ramona Varma-Hernandez.</p>      
+       
+       
+        
+        
+   </main>
+   
+
+   
+   <footer> 
+       
+<h3>Were located at SW 3rd and Alder in Downtown Portland</h3>
+<h4>Hours of Operation: Open 7 days a week, 11:00 AM to 7:00 PM </h4>
+<h4>To place an order call 503-555-5555</h4>
+       
+<div id="iframe"></div>     
+<div id="map"></div>
+
+       
+
+
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a> 
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-yelp"></a>
+           
+     
+   </footer>
+        
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+   
+   <script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(45.518782, -122.675246), zoom: 18
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+ </script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbzRi7Ov6Q2D4wjUgs2I6GeG-EvP4ZFK0&callback=myMap"></script>
+   </body>
+   </html>
